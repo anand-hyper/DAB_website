@@ -21,10 +21,15 @@ const port = process.env.PORT || 4000
 app.use(cors({
     origin: [
         'http://localhost:3000',
-        'http://localhost:5173'
+        'http://localhost:5173',
+        'https://dab-website-admin.vercel.app',
+        'https://dab-website-frontend.vercel.app'
     ],
-    credentials: true
+    credentials: true,
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization', 'token', 'x-access-token']
 }))
+
 
 // Error handling for database connection
 try {
