@@ -19,7 +19,7 @@ const port = process.env.PORT || 4000
 
 // CORS configuration
 app.use(cors({
-    origin: '*',
+    origin: ['http://localhost:5174', 'https://dab-website-frontendnew.vercel.app'],
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization', 'token', 'x-access-token']
